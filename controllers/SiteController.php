@@ -19,21 +19,16 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::class,
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
+            [
+                'class' => 'yii\filters\ContentNegotiator',// in a controller
+                // if in a module, use the following IDs for user actions
+                // 'only' => ['user/view', 'user/index']
+                'formats' => [
+                    'application/json' => Response::FORMAT_JSON,
                 ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
+                'languages' => [
+                    'en',
+                    'de',
                 ],
             ],
         ];
@@ -63,7 +58,7 @@ class SiteController extends Controller
     #atualização
     public function actionIndex()
     {
-        Yii::$app->response->format = Response::FORMAT_JSON;
+
         return [
             'mensagem' => 'Hello World!'
         ];
