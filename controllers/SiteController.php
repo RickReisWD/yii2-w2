@@ -27,8 +27,7 @@ class SiteController extends Controller
                     'application/json' => Response::FORMAT_JSON,
                 ],
                 'languages' => [
-                    'en',
-                    'de',
+                    'en'
                 ],
             ],
         ];
