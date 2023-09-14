@@ -1,12 +1,22 @@
 <?php
-
+use yii\web\Response;
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        [
+            'class' => 'yii\filters\ContentNegotiator',
+            'formats' => [
+                'application/json' => Response::FORMAT_JSON,
+            ],
+            'languages' => [
+                'en'
+            ],
+        ],
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',

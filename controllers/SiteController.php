@@ -19,15 +19,21 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            [
-                'class' => 'yii\filters\ContentNegotiator',// in a controller
-                // if in a module, use the following IDs for user actions
-                // 'only' => ['user/view', 'user/index']
-                'formats' => [
-                    'application/json' => Response::FORMAT_JSON,
+            'access' => [
+                'class' => AccessControl::class,
+                'only' => ['logout'],
+                'rules' => [
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
-                'languages' => [
-                    'en'
+            ],
+            'verbs' => [
+                'class' => VerbFilter::class,
+                'actions' => [
+                    'logout' => ['post'],
                 ],
             ],
         ];
