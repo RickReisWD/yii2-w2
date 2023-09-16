@@ -10,7 +10,6 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
-
 class SiteController extends Controller
 {
     /**
@@ -60,13 +59,9 @@ class SiteController extends Controller
      *
      * @return string
      */
-    #atualização
     public function actionIndex()
     {
-
-        return [
-            'mensagem' => 'Hello World!'
-        ];
+        return $this->render('index');
     }
 
     /**

@@ -1,22 +1,12 @@
 <?php
-use yii\web\Response;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => [
-        [
-            'class' => 'yii\filters\ContentNegotiator',
-            'formats' => [
-                'application/json' => Response::FORMAT_JSON,
-            ],
-            'languages' => [
-                'en'
-            ],
-        ],
-    ],
+    'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -24,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'oNrNsKoF3KVEfqr8Ta5qCCBDvCFnruxi',
+            'cookieValidationKey' => '63_ojZrLW8Ua9Fy74LXReAw50Dq_wQ5x',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
