@@ -12,7 +12,11 @@ class m230916_020313_create_empresa extends Migration
      */
     public function safeUp()
     {
-
+        $this->createTable('companies',[
+            'id'=> $this->primaryKey(),
+            'name'=>$this->string(255)->notNull(),
+            'legal_name'=>$this->string(255)->notNull()
+        ]);
     }
 
     /**
@@ -20,9 +24,7 @@ class m230916_020313_create_empresa extends Migration
      */
     public function safeDown()
     {
-        echo "m230916_020313_create_empresa cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('companies');
     }
 
     /*
