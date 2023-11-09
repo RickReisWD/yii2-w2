@@ -3,19 +3,19 @@
 use yii\db\Migration;
 
 /**
- * Class m230916_020313_create_empresa
+ * Class m231102_173727_create_pessoas
  */
-class m230916_020313_create_empresa extends Migration
+class m231102_173727_create_pessoas extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('companies',[
+        $this->createTable('pessoas',[
             'id'=> $this->primaryKey(),
             'name'=>$this->string(255)->notNull(),
-            'legal_name'=>$this->string(255)->notNull()
+            'email'=>$this->string(255)->notNull(),
         ]);
     }
 
@@ -24,7 +24,7 @@ class m230916_020313_create_empresa extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('companies');
+        $this->dropTable('pessoas');
     }
 
     /*
@@ -36,7 +36,7 @@ class m230916_020313_create_empresa extends Migration
 
     public function down()
     {
-        echo "m230916_020313_create_empresa cannot be reverted.\n";
+        echo "m231102_173727_create_pessoas cannot be reverted.\n";
 
         return false;
     }

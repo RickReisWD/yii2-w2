@@ -11,6 +11,7 @@ $config = [
         [
             'class' => 'yii\filters\ContentNegotiator',
             'formats' => [
+                //'text/html'=>Response::FORMAT_HTML,
                 'application/json' => Response::FORMAT_JSON,
             ],
         ],
@@ -22,7 +23,10 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '63_ojZrLW8Ua9Fy74LXReAw50Dq_wQ5x',
+            //'cookieValidationKey' => '63_ojZrLW8Ua9Fy74LXReAw50Dq_wQ5x',
+            'enableCsrfCookie' => false,
+            'enableCookieValidation'=> false,
+            'enableCsrfValidation'=> false
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -50,19 +54,21 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+    
     ],
     'params' => $params,
     'controllerMap' => [
         'company' => 'app\controllers\CompanyController',
+        'exercicio' => 'app\controllers\ExercicioController'
     ],
+    'layout'=> false,
 ];
 
 if (YII_ENV_DEV) {
