@@ -16,19 +16,10 @@ return array (
   'yiisoft/yii2-debug' => 
   array (
     'name' => 'yiisoft/yii2-debug',
-    'version' => '2.1.24.0',
+    'version' => '2.1.25.0',
     'alias' => 
     array (
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug/src',
-    ),
-  ),
-  'yiisoft/yii2-faker' => 
-  array (
-    'name' => 'yiisoft/yii2-faker',
-    'version' => '2.0.5.0',
-    'alias' => 
-    array (
-      '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker/src',
     ),
   ),
   'yiisoft/yii2-gii' => 
@@ -47,6 +38,24 @@ return array (
     'alias' => 
     array (
       '@yii/symfonymailer' => $vendorDir . '/yiisoft/yii2-symfonymailer/src',
+    ),
+  ),
+  'tebazil/yii2-db-seeder' => 
+  array (
+    'name' => 'tebazil/yii2-db-seeder',
+    'version' => '0.0.0.0',
+    'alias' => 
+    array (
+      '@tebazil/yii2seeder' => $vendorDir . '/tebazil/yii2-db-seeder/src',
+    ),
+  ),
+  'yiisoft/yii2-faker' => 
+  array (
+    'name' => 'yiisoft/yii2-faker',
+    'version' => '2.0.4.0',
+    'alias' => 
+    array (
+      '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
 );

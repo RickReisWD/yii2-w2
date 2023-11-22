@@ -888,7 +888,9 @@ class m231108_231503_add_rows extends Migration
     public function safeDown()
     {
         $this->delete('address');
+        $this->delete('mensagens');
         $this->delete('pessoas');
+        $this->delete('chats');
     }
 
     /*

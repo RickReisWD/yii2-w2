@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit873251e443894050820a80324d3996af
+class ComposerStaticInit772e2e451822aead045fa7a783d56c3e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -35,6 +35,11 @@ class ComposerStaticInit873251e443894050820a80324d3996af
             'yii\\composer\\' => 13,
             'yii\\bootstrap5\\' => 15,
             'yii\\' => 4,
+        ),
+        't' => 
+        array (
+            'tebazil\\yii2seeder\\' => 19,
+            'tebazil\\dbseeder\\' => 17,
         ),
         'c' => 
         array (
@@ -111,7 +116,7 @@ class ComposerStaticInit873251e443894050820a80324d3996af
         ),
         'yii\\faker\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yiisoft/yii2-faker/src',
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-faker',
         ),
         'yii\\debug\\' => 
         array (
@@ -128,6 +133,14 @@ class ComposerStaticInit873251e443894050820a80324d3996af
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'tebazil\\yii2seeder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tebazil/yii2-db-seeder/src',
+        ),
+        'tebazil\\dbseeder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tebazil/db-seeder/src',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -219,8 +232,8 @@ class ComposerStaticInit873251e443894050820a80324d3996af
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\EventDispatcher\\' => 
         array (
@@ -244,7 +257,7 @@ class ComposerStaticInit873251e443894050820a80324d3996af
         ),
         'Faker\\' => 
         array (
-            0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -268,8 +281,8 @@ class ComposerStaticInit873251e443894050820a80324d3996af
         ),
         'Codeception\\' => 
         array (
-            0 => __DIR__ . '/..' . '/codeception/stub/src',
-            1 => __DIR__ . '/..' . '/codeception/codeception/src/Codeception',
+            0 => __DIR__ . '/..' . '/codeception/codeception/src/Codeception',
+            1 => __DIR__ . '/..' . '/codeception/stub/src',
             2 => __DIR__ . '/..' . '/codeception/verify/src/Codeception',
         ),
     );
@@ -964,10 +977,10 @@ class ComposerStaticInit873251e443894050820a80324d3996af
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit873251e443894050820a80324d3996af::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit873251e443894050820a80324d3996af::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit873251e443894050820a80324d3996af::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit873251e443894050820a80324d3996af::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit772e2e451822aead045fa7a783d56c3e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit772e2e451822aead045fa7a783d56c3e::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit772e2e451822aead045fa7a783d56c3e::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit772e2e451822aead045fa7a783d56c3e::$classMap;
 
         }, null, ClassLoader::class);
     }

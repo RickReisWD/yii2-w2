@@ -1,6 +1,8 @@
 <?php
 
 use yii\web\Response;
+use \yii\rbac\DbManager;
+
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
@@ -61,12 +63,16 @@ $config = [
             'rules' => [
             ],
         ],
+        'authManager' => [
+            'class' => DbManager::class,
+            'cache' => 'cache',
+        ],
     
     ],
     'params' => $params,
     'controllerMap' => [
         'company' => 'app\controllers\CompanyController',
-        'exercicio' => 'app\controllers\ExercicioController'
+        'exercicio' => 'app\controllers\ExercicioController',
     ],
     'layout'=> false,
 ];

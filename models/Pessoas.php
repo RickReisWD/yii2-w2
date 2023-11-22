@@ -20,6 +20,7 @@ class Pessoas extends ActiveRecord {
     }
 
     public function getIdChat($id){
+        
         $this->id = $id;
         return $this->mensagens[0]->chat_id;
 
